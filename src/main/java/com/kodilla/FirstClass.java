@@ -1,46 +1,34 @@
 package com.kodilla;
 
-import java.util.Scanner;
-
 class Calculator {
 
-    public static void main(String[] args) {
-        Scanner Calc = new Scanner(System.in);
-        int n1;
-        int n2;
-        int Answer;
+    double num1, num2;
 
-        System.out.println("Enter the first number: ");
-        n1 = Calc.nextInt();
-        System.out.println("Enter the second number:" );
-        n2 = Calc.nextInt();
-        Calc.nextLine();
-        System.out.println("Select the order of operation: ");
-        char operator = Calc.nextLine().charAt(0);
-
-
-        if (operator == '+') {
-            Answer = (n1 + n2);
-            System.out.println("Answer:" + Answer);
-        }
-        else if (operator == '-') {
-            Answer = (n1 - n2);
-            System.out.println("Answer:" + Answer);
-
-        }
-        else if (operator == '*') {
-            Answer = (n1 * n2);
-            System.out.println("Answer:" + Answer);
-        }
-        else if (operator == '/') {
-            Answer = (n1/n2);
-            System.out.println("Answer:" + Answer);
-        }
-        else {
-            System.out.println("not implemented yet. Sorry!");
-        }
-
-
+    Calculator(double num1, double num2) {
+        this.num1 = num1;
+        this.num2= num2;
     }
 
+    public double add() {
+        double result1 = num1 + num2;
+        return result1;
+    }
+
+    public double substract() {
+        double result2 = num1 - num2;
+        return result2;
+    }
+}
+
+class Application {
+    public static void main(String[] args) {
+
+        Calculator calc1 = new Calculator(5, 10);
+
+        double result1 = calc1.add();
+        double result2 = calc1.substract();
+
+        System.out.println("Substraction result: " + result2);
+        System.out.println("Addition result: " + result1);
+    }
 }
