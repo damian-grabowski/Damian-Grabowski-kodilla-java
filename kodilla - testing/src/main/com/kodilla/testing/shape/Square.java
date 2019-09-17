@@ -1,4 +1,4 @@
-package java.com.kodilla.testing.shape;
+package com.kodilla.testing.shape;
 
 import java.util.Objects;
 
