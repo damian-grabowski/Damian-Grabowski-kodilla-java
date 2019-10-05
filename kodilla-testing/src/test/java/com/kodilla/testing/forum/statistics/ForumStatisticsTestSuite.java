@@ -1,6 +1,5 @@
 package com.kodilla.testing.forum.statistics;
 
-import com.kodilla.testing.forum.ForumStatistics;
 import org.junit.Before;
 import org.junit.Test;
 

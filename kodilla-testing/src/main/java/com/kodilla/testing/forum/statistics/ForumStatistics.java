@@ -1,8 +1,8 @@
-package com.kodilla.testing.forum;
+package com.kodilla.testing.forum.statistics;
 
 import com.kodilla.testing.forum.statistics.Statistics;
 
-public class ForumStatistics {
+public class giForumStatistics {
     private int usersQuantity;
     private int postsQuantity;
     private int commentsQuantity;
