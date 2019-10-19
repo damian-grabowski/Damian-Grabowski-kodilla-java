@@ -2,7 +2,7 @@ package com.kodilla.testing.forum.statistics;
 
 import com.kodilla.testing.forum.statistics.Statistics;
 
-public class giForumStatistics {
+public class ForumStatistics {
     private int usersQuantity;
     private int postsQuantity;
     private int commentsQuantity;
