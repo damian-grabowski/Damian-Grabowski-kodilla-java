@@ -4,10 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
-import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
@@ -120,7 +119,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void  testAddTaskListFindLongTasks() {
+    public void testAddTaskListFindLongTasks() {
         //Given
         Board project = prepareTestData();
 
@@ -146,20 +145,13 @@ public class BoardTestSuite {
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-        double sumOfDays = project.getTaskLists().stream()
+        double averageDaysQuantity = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(t -> Period.between(t.getCreated(),LocalDate.now()).getDays())
-                .reduce(0, (sum, days) -> sum += days).doubleValue();
-        long tasksInProgressQuantity = project.getTaskLists().stream()
-                .filter(inProgressTasks::contains)
-                .flatMap(tl -> tl.getTasks().stream())
-                .count();
-        double averageDaysQuantity = sumOfDays/tasksInProgressQuantity;
+                .mapToLong(t -> ChronoUnit.DAYS.between(t.getCreated(), LocalDate.now()))
+                .average().orElse(0);
 
         //Then
         Assert.assertEquals(10.0, averageDaysQuantity, 0.0001);
-
     }
-
 }
