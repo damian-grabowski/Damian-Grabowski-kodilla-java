@@ -16,10 +16,10 @@ public class ForumStatisticsTestSuite {
     private ForumStatistics forumStatistics;
 
     @Before
-    public void beforeTest(){
+    public void beforeTest() {
         statisticsMock = mock(Statistics.class);
         List<String> listMock = new ArrayList<>();
-        for(int i=0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             listMock.add("User");
         }
         when(statisticsMock.usersNames()).thenReturn(listMock);
@@ -29,7 +29,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithZeroPosts(){
+    public void testCalculateAdvStatisticsWithZeroPosts() {
         //Given
         when(statisticsMock.postsCount()).thenReturn(0);
         //When
@@ -42,7 +42,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithThousandPosts(){
+    public void testCalculateAdvStatisticsWithThousandPosts() {
         //Given
         when(statisticsMock.postsCount()).thenReturn(1000);
         //When
@@ -54,7 +54,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithZeroComments(){
+    public void testCalculateAdvStatisticsWithZeroComments() {
         //Given
         when(statisticsMock.commentsCount()).thenReturn(0);
         //When
@@ -66,7 +66,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsLessCommentsThanPosts(){
+    public void testCalculateAdvStatisticsLessCommentsThanPosts() {
         //Given
         when(statisticsMock.commentsCount()).thenReturn(2);
         when(statisticsMock.postsCount()).thenReturn(10);
@@ -81,7 +81,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsMoreCommentsThanPosts(){
+    public void testCalculateAdvStatisticsMoreCommentsThanPosts() {
         //Given
 
         //When
@@ -95,9 +95,9 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithZeroUsers(){
+    public void testCalculateAdvStatisticsWithZeroUsers() {
         //Given
-        List<String>listMock = new ArrayList<>();
+        List<String> listMock = new ArrayList<>();
         when(statisticsMock.usersNames()).thenReturn(listMock);
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
@@ -109,10 +109,10 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithHundredUsers(){
+    public void testCalculateAdvStatisticsWithHundredUsers() {
         //Given
         List<String> listMock = new ArrayList<>();
-        for(int i=0; i<100; i++){
+        for (int i = 0; i < 100; i++) {
             listMock.add("User");
         }
         when(statisticsMock.usersNames()).thenReturn(listMock);

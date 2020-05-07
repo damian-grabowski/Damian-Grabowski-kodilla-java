@@ -15,19 +15,19 @@ public class ShapeCollector {
         shapeCollection.add(shape);
     }
 
-    public boolean removeFigure(Shape shape){
+    public boolean removeFigure(Shape shape) {
         return shapeCollection.remove(shape);
     }
 
-    public Shape getFigure(int n){
-        if(n<shapeCollection.size() && n>=0){
+    public Shape getFigure(int n) {
+        if (n < shapeCollection.size() && n >= 0) {
             return shapeCollection.get(n);
         } else {
             return null;
         }
     }
 
-    public void showFigures(){
+    public void showFigures() {
         System.out.println(shapeCollection.toString());
     }
 }

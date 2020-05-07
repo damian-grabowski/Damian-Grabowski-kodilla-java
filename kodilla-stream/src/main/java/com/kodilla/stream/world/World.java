@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class World {
-    private final List<Continent>listOfContinentsOnTheWorld = new ArrayList<>();
+    private final List<Continent> listOfContinentsOnTheWorld = new ArrayList<>();
 
     public boolean addContinent(Continent continent) {
         return listOfContinentsOnTheWorld.add(continent);

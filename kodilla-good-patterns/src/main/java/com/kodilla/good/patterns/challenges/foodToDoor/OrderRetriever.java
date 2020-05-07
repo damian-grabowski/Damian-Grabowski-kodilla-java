@@ -11,11 +11,11 @@ public class OrderRetriever {
         List<OrderRequest> orderRequestList = new ArrayList<>();
 
         Customer customer = new Customer("JamesPotter");
-        FoodProducer foodProducer =  new GlutenFreeShop();
+        FoodProducer foodProducer = new GlutenFreeShop();
         Map<Product, Integer> productsList = new HashMap<>();
         productsList.put(new GlutenFreeProduct("cookies", "oat biscuits"), 50);
         productsList.put(new GlutenFreeProduct("flour", "coconut flour"), 10);
-        productsList.put(new GlutenFreeProduct("rice", "brown rice"),5);
+        productsList.put(new GlutenFreeProduct("rice", "brown rice"), 5);
 
         orderRequestList.add(new OrderRequest(customer, foodProducer, productsList));
 
@@ -31,7 +31,7 @@ public class OrderRetriever {
         Customer customer2 = new Customer("JonGhost");
         FoodProducer foodProducer2 = new HealthyShop();
         Map<Product, Integer> productsList2 = new HashMap<>();
-        productsList.put(new MeatProduct("beef", "T-bone"),4); //zapytac sie
+        productsList.put(new MeatProduct("beef", "T-bone"), 4); //zapytac sie
 
         orderRequestList.add(new OrderRequest(customer2, foodProducer2, productsList2));
 

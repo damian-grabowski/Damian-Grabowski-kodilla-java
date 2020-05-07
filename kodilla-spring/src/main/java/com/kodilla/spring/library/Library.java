@@ -15,7 +15,7 @@ public class Library {
         this.libraryDbController = libraryDbController;
     }
 
-    public Library(){
+    public Library() {
         //do nothing
     }
 

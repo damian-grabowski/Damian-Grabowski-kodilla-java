@@ -43,6 +43,6 @@ public class GlutenFreeShop implements FoodProducer {
                 return false;
             }
         }
-        return  true;
+        return true;
     }
 }

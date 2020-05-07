@@ -10,10 +10,10 @@ public class FlightSearchProcessor {
     private final HashMap<String, Flight> flightPlan = new HashMap<>();
 
     public void addFlight(Flight flight) {
-        flightPlan.put(flight.getFlightNumber(),flight);
+        flightPlan.put(flight.getFlightNumber(), flight);
     }
 
-    public List<Flight> searchDepartureAirport (Airport airport) {
+    public List<Flight> searchDepartureAirport(Airport airport) {
 
         List<Flight> resultDepartureAirport = flightPlan.values().stream()
                 .filter(flight -> flight.getDepartureAirport().equals(airport))
@@ -21,7 +21,7 @@ public class FlightSearchProcessor {
         return resultDepartureAirport;
     }
 
-    public List <Flight> searchArrivalAirport (Airport airport) {
+    public List<Flight> searchArrivalAirport(Airport airport) {
 
         List<Flight> resultArrivalAirport = flightPlan.values().stream()
                 .filter(flight -> flight.getArrivalAirport().equals(airport))
@@ -29,7 +29,7 @@ public class FlightSearchProcessor {
         return resultArrivalAirport;
     }
 
-    public List<Flight> searchTransferFlight (Airport departureAirport, Airport destinationAirport, Airport transferAirport) {
+    public List<Flight> searchTransferFlight(Airport departureAirport, Airport destinationAirport, Airport transferAirport) {
         List<Flight> resultsTransferFlight = new ArrayList<>();
 
         Flight searchFirstFlight = flightPlan.values().stream()

@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class ShapeCollectorTestSuite {
 
     @Test
-    public void testAddFigure(){
+    public void testAddFigure() {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
@@ -23,7 +23,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testRemoveFigure(){
+    public void testRemoveFigure() {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
@@ -37,7 +37,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testRemoveFigureWhichDoesNotExist(){
+    public void testRemoveFigureWhichDoesNotExist() {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
@@ -50,7 +50,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetFigureExistNumber(){
+    public void testGetFigureExistNumber() {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
@@ -63,7 +63,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetFigureNumberOutOfRange(){
+    public void testGetFigureNumberOutOfRange() {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
@@ -72,14 +72,15 @@ public class ShapeCollectorTestSuite {
         //Then
         assertNull(shapeResult);
     }
+
     @Test
-    public void testShowFigures(){
+    public void testShowFigures() {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Shape shape = new Square(4);
         shapeCollector.addFigure(shape);
-        ArrayList<Shape> shapeList= new ArrayList<>();
+        ArrayList<Shape> shapeList = new ArrayList<>();
         shapeList.add(shape);
         //When
         List<Shape> shapeResultList = shapeCollector.getShapeCollection();

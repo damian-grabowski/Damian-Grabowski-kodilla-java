@@ -8,23 +8,24 @@ import java.util.List;
 public class CollectionTestSuite {
 
     private static OddNumbersExterminator oddNumbersExterminator;
+
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
 
     @After
-    public void after(){
+    public void after() {
         System.out.println("Test Case: end");
     }
 
     @BeforeClass
-    public static void beforeClass(){
+    public static void beforeClass() {
         oddNumbersExterminator = new OddNumbersExterminator();
     }
 
     @Test
-    public void testOddNumbersExterminatorEmptyList(){
+    public void testOddNumbersExterminatorEmptyList() {
         //Given
 
         ArrayList<Integer> emptyList = new ArrayList<>();
@@ -36,7 +37,7 @@ public class CollectionTestSuite {
     }
 
     @Test
-    public void testOddNumbersExterminatorNormalList(){
+    public void testOddNumbersExterminatorNormalList() {
         //Given
         ArrayList<Integer> normalList = new ArrayList<>();
         normalList.add(1);
@@ -47,7 +48,7 @@ public class CollectionTestSuite {
         normalList.add(4);
         normalList.add(10);
 
-        ArrayList<Integer>expectedResultList = new ArrayList<>();
+        ArrayList<Integer> expectedResultList = new ArrayList<>();
         expectedResultList.add(2);
         expectedResultList.add(2);
         expectedResultList.add(4);

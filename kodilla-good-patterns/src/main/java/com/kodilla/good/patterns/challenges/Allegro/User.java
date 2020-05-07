@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.challenges.Allegro;
 public class User {
 
     private String name;
-    private  String surname;
+    private String surname;
 
     public User(String name, String surname) {
         this.name = name;

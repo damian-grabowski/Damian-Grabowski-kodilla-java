@@ -24,7 +24,7 @@ public class CalculatorTestSuite {
         //Then
         Assert.assertEquals(10, addResult, 0.01);
         Assert.assertEquals(8, subResult, 0.01);
-        Assert.assertEquals(4,mulResult, 0.01);
+        Assert.assertEquals(4, mulResult, 0.01);
         Assert.assertEquals(10, divResult, 0.01);
 
     }

@@ -13,7 +13,7 @@ public class ExtraFoodShop implements FoodProducer {
     }
 
     private Map<Product, Integer> createProductsList() {
-        Map<Product,Integer> productsList = new HashMap<>();
+        Map<Product, Integer> productsList = new HashMap<>();
 
         productsList.put(new MeatProduct("beef", "T-bone"), 40);
         productsList.put(new MeatProduct("beef", "Porterhouse Steak"), 25);
